@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.scss">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="scrollContainer">
+
+        <div class="hamburger-menu">
+            <span class="burger-item"></span>
+            <span class="burger-item"></span>
+            <span class="burger-item"></span>
+        </div>
+
+        <section class="menuContainer">
+            <nav class="menu">
+                <ul>
+                    <li class="menu-item"><a href="#home">Home</a></li>
+                    <li class="menu-item"><a href="#about">About me</a></li>
+                    <li class="menu-item"><a href="#skills">Skills & Experience</a></li>
+                    <li class="menu-item"><a href="#work">My Work</a></li>
+                    <li class="menu-item"><a href="#contact">Contact me</a></li>
+                </ul>
+            </nav>
+
+            <div class="media">
+                <a href="https://github.com/Jeremy-lal" target="blank">GitHub</a>
+                <p>-</p>
+                <a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my-lalait/" target="blank">Linkedin</a>
+                <p>-</p>
+                <a href="mailto: jeremy.lalait@gmail.com">jeremy.lalait@gmail.com</a>
+            </div>
+        </section>
+
+        <section id="home">
+
+            <div id="icosaedrus"></div>
+
+            <div class="textDiv">
+                <h1>Jérémy Lalait</h1>
+                <p>FULL Stack Developer</p>                
+            </div>
+
+        </section>
+
+        <section id="about">
+            
+
+            <div class="textDiv">
+                <h2>About me</h2>
+                <p>Hello!</p>
+                <p>My name is Jérémy, a 22 years old FULL STACK DEVELOPER from France living in Bordeaux where I work
+                    for a company called DocOne until June 2021.</p>
+                <p>I am an ambitious and passionate developper who can create basic sites but also some more creative.
+                    Passionate about web development, I like to discover, experiment and learn new technologies.</p>
+
+                <h3>Hobbies :</h3>
+                <ul>
+                    <li>volunteer firefighter</li>
+                    <li>practice sport</li>
+                    <li>chess</li>
+                </ul>
+            </div>
+
+            <div id="torus" class="three"></div>
+
+        </section>
+
+        <section id="skills">
+
+            <div class="left" id="techno">
+                <img src="assets/techno/angular.svg" alt="Figure" title="Figure" class="layer angular" data-speed="-5">
+                <img src="assets/techno/css.png" alt="Figure" title="Figure" class="layer css" data-speed="2">
+                <img src="assets/techno/typescript.svg" alt="Figure" title="Figure" class="layer ts" data-speed="2">
+                <img src="assets/techno/html.png" alt="Figure" title="Figure" class="layer html" data-speed="6">
+                <img src="assets/techno/javascript.png" alt="Figure" title="Figure" class="layer js" data-speed="-4">
+                <img src="assets/techno/mysql.png" alt="Figure" title="Figure" class="layer mysql" data-speed="-6">
+                <img src="assets/techno/node.png" alt="Figure" title="Figure" class="layer node" data-speed="-2">
+                <img src="assets/techno/postgresql.webp" alt="Figure" title="Figure" class="layer postgre"
+                    data-speed="10">
+                <img src="assets/techno/WordPress.svg.png" alt="Figure" title="Figure" class="layer wp" data-speed="6">
+            </div>
+
+            <div class="textDiv">
+                <h2>Skills & Experience</h2>
+                <p>I’m a full stack developer but the main area of my expertise is Front-End development.</p>
+                <p> For the Front-End part, I use HTML, CSS (or SASS), JS (or TypeScript). I can also use a framework
+                    like Angular for bigger projects.
+                    I have a basic experience in CMS like WordPress or Webflow.</p>
+                <p> For the Back-End part, I use Node.js with TypeScript.</p>
+
+            </div>
+
+        </section>
+
+        <section id="work">
+            <h2>My Work</h2>
+
+            <div class="projects">
+      
+                <a href="">
+                    <div>greta thunberg </div>
+                    <div class="details">
+                        <h4>Ceci est un details</h4>
+                    </div>
+                </a>
+                <a href="">
+                    <div>Loeven morcel</div>
+                    <div class="details"></div>
+                </a>
+               
+            </div>
+        </section>
+
+        <section id="contact">
+            <div id="sphere" class="three"></div>
+            <div class="textDiv">
+                <h2>Contact me</h2>
+                <form action="https://formspree.io/f/###" method="POST" id="my-form">
+
+                    <div class="half">
+                        <input type="text" id="lastName" name="lastName" placeholder="Name">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                    </div>
+
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+
+            </div>
+
+        </section>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+
+<script type="module" src="index.js"></script>
+
+</html>

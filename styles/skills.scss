@@ -1,0 +1,113 @@
+#skills {
+    .left {
+        position: relative;
+
+        img {
+            width: 80px;
+            position: absolute;
+            filter: grayscale(80%);
+            transform:initial;
+            transition: transform 0.4s ease-in-out;
+            -webkit-transition: transform 0.4s ease-in-out;
+            -moz-transition: transform 0.4s ease-in-out;
+            -ms-transition: transform 0.4s ease-in-out;
+            -o-transition: transform 0.4s ease-in-out;
+            -webkit-transform:initial;
+            -moz-transform:initial;
+            -ms-transform:initial;
+            -o-transform:initial;
+}
+        
+        .angular {
+            top: 50%;
+            right: 38%;
+        }
+        
+        .ts {
+            top: 15%;
+            left: 40%;
+        }
+        .css {
+            bottom: 5%;
+            right: 25%;
+        }
+        .html {
+            top: 40%;
+            right: 7%;
+        }
+        .js {
+            top: 5%;
+            right: 15%;
+        }
+        .mysql {
+            bottom: 20vh;
+            left: 20%;
+            width: 150px;
+        }
+        .node {
+            top: 5%;
+            left: 5%;
+            width: 150px;
+        }
+        .postgre {
+            top: 30%;
+            left: 10%;
+        }
+        .wp {
+            width: 150px;
+            bottom: 5%;
+            left: 10%;
+        }     
+    }
+}
+
+@media screen and (max-width:1280px) {
+    #skills {
+        .left {
+            img {
+                width: 50px;
+            }
+            
+            .mysql {
+                width: 80px;
+            }
+            .node {
+                width: 80px;
+            }
+            .postgre {
+                top: 40%;
+            }
+            .wp {
+                width: 80px;
+            }     
+        }
+    }
+}
+
+@media screen and (max-width:749px) {
+    #skills {
+        .left {
+            img {
+                width: 40px;
+            }
+            
+            .mysql {
+                width: 70px;
+            }
+            .node {
+                width: 70px;
+            }
+            .postgre {
+                top: 40%;
+            }
+            .wp {
+                width: 70px;
+            }     
+        }
+    }
+}
+
+
+@media screen and (max-width:479px) {
+
+}

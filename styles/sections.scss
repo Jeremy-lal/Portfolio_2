@@ -1,0 +1,227 @@
+#home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    div {
+        width: 40%;
+    }
+  
+    .textDiv {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 70vh;
+
+      p {
+        font-size: 2vw;
+        margin-top: 4vh;
+      }
+    }
+}
+  
+#about, #skills, #contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .textDiv, .left {
+        width: 35%;
+        height: 60vh;
+
+        li {
+          list-style: circle;
+          list-style-position: inside;
+        }
+    }
+}
+        
+
+
+#work {
+
+  h2 {
+    margin-left: 2vw;
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      width: 15vw;
+      min-width: 150px;
+      height: 15vw;
+      min-height: 150px;
+      border: 1px solid $colorLightGreen;
+      margin: 2vw;
+      position: relative;
+      overflow: hidden;
+
+      div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .details {
+        background-color: $colorLightGreen;
+        height:100%;
+        width:100%;
+        position:absolute;
+        top: 100%;
+        transition: top 0.4s ease-in;
+        -webkit-transition: top 0.4s ease-in;
+        -moz-transition: top 0.4s ease-in;
+        -ms-transition: top 0.4s ease-in;
+        -o-transition: top 0.4s ease-in;
+
+        h4 {
+          color: $colorDarkGreen;
+        }
+}
+
+      &:hover {
+        .details {
+          top: 0;
+        }
+      }
+  }
+  }
+}
+
+
+
+@media screen and (max-width:1280px) {
+  
+  #about, #skills, #contact {
+    
+    .textDiv, .left {
+        width: 40%;
+    }
+  }
+
+  #work {
+  
+    .projects {
+  
+      padding-top: 5vh;
+      a {
+        width: 20vw;
+        height: 20vw;
+        }
+      }
+    }
+}
+
+@media screen and (max-width:780px) {
+
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    
+    .textDiv {
+      height: auto;
+      width: 80%;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+    
+    #icosaedrus {
+      height: 70vh;
+      width: 80%;
+    }
+  }
+
+  
+  #about, #contact {
+    flex-direction: column;
+    align-items: center;
+
+    .textDiv, .left {
+        width: 80%;
+        height: auto;
+    }
+  }
+
+  #contact {
+    justify-content: flex-start;
+    // z-index: 5;
+  }
+
+  #skills {
+    flex-direction: column-reverse;
+
+    .textDiv, .left {
+      width: 80%;
+      height: 45vh;
+  }
+    
+  }
+  
+  #work {
+
+    padding-top: 5vh;
+    padding-left: 10%;
+  
+    .projects {
+  
+      padding-top: 5vh;
+      a {
+        width: 20vw;
+        height: 20vw;
+        }
+      }
+    }
+
+    #torus {
+      height: 30vh;
+      width: 80%;
+    }
+
+}
+@media screen and (max-height:650px), (max-width:300px) {
+  #skills {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 5vh;
+    height: 95vh;
+
+    #techno {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width:479px) {
+ .three {
+   display: none;
+ }
+
+ #about {
+   justify-content: flex-start;
+   padding-top: 5vh;
+   height: 95vh;
+ }
+
+ #contact {
+  height: 85vh;
+  padding-top: 15vh;
+ }
+
+ #work {
+
+  .projects {
+    a {
+      width: 80vw;
+      height: 20vw;
+      }
+    }
+  }
+}
+

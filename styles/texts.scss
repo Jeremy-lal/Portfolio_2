@@ -1,0 +1,69 @@
+h1 {
+    font-size: 8vw;
+    color: $colorLightGreen;
+    font-family: Lobster Two;
+}
+
+h2 {
+    padding: 5vh 0;
+    font-size: 4vw;
+    font-family: Lobster Two;
+}
+
+h3 {
+    font-size: 1vw;
+    margin: 3vh 0 1.5vh 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 23px;
+  text-align: justify;
+  margin-bottom: 1vw;
+}
+
+@media screen and (max-width:1280px) {
+
+  h2 {
+    font-size: 50px;
+  }
+  
+    h3 {
+      font-size: 2vw;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width:780px) {
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:479px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+}
+@media screen and (max-width:330px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+}

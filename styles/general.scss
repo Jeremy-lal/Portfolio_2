@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    color: $colorLightGreen;
+  
+    &::-webkit-scrollbar {
+        display: none;
+    }
+  }
+  
+
+.scrollContainer {
+    overflow: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-snap-type: y mandatory; 
+    section {
+      height: 100vh;
+	    scroll-snap-align: start;
+      background-color: $colorDarkGreen;
+      font-family: Montserrat;
+      box-shadow: 0 -1px 0 #FFF;
+    }
+}
+
+
+@media screen and (max-width:1280px) {
+
+}
+
+@media screen and (max-width:749px) {
+
+}
+
+@media screen and (max-width:479px) {
+
+}
