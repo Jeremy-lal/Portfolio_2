@@ -30,6 +30,10 @@ export function three() {
     controlsTorus.enableZoom = false;
     controlsSphere.enableZoom = false;
 
+    controlsIcosaedrus.enableDamping = true;
+    controlsTorus.enableDamping = true;
+    controlsSphere.enableDamping = true;
+
     icosaedrus.appendChild(rendererIcosaedrus.domElement);
     torus.appendChild(rendererTorus.domElement);
     sphere.appendChild(rendererSphere.domElement);
