@@ -72,6 +72,7 @@
         background-color: $colorLightGreen;
         height:100%;
         width:100%;
+        padding: 0 5%;
         position:absolute;
         top: 100%;
         transition: top 0.4s ease-in;
@@ -173,10 +174,15 @@
     .projects {
   
       padding-top: 5vh;
+
       a {
         width: 20vw;
         height: 20vw;
         }
+      
+      .details {
+        display: none;
+      }
       }
     }
 
@@ -218,8 +224,9 @@
 
   .projects {
     a {
+      min-height: 100px;
       width: 80vw;
-      height: 20vw;
+      height: 10vw;
       }
     }
   }

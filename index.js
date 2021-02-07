@@ -8,9 +8,3 @@ technoEffect();
 menu();
 three();
 
-
-
-// document.addEventListener('load', function () {
-//     AOS.refresh();
-// });
-
