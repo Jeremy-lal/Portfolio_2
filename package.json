@@ -13,6 +13,7 @@
   "dependencies": {
     "parcel": "^1.12.4",
     "scripts": "^0.1.0",
+    "stats.js": "^0.17.0",
     "three": "^0.124.0"
   },
   "devDependencies": {

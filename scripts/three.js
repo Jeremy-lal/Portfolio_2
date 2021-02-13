@@ -1,6 +1,12 @@
 import * as THREE from 'three';
 import { OrbitControls } from './OrbitControls';
 
+import Stats from 'stats.js'
+
+const stats = new Stats()
+// stats.showPanel(0) //
+// document.body.appendChild(stats.dom)
+
 export function three() {
 
     let width = window.innerWidth;
@@ -14,17 +20,18 @@ export function three() {
     const sceneTorus = new THREE.Scene();
     const sceneSphere = new THREE.Scene();
 
-    const cameraIcosaedrus = new THREE.PerspectiveCamera(75, (width / 2) / (height), 0.1, 1000);
-    const cameraTorus = new THREE.PerspectiveCamera(75, (width / 2) / (height), 0.1, 1000);
-    const cameraSphere = new THREE.PerspectiveCamera(75, (width / 2.5) / (height), 0.1, 1000);
+    /**
+     * Camera
+     */
+    const cameraIcosaedrus = new THREE.PerspectiveCamera(75, (width / 2) / (height), 0.1, 100);
+    const cameraTorus = new THREE.PerspectiveCamera(75, (width / 2) / (height), 0.1, 100);
+    const cameraSphere = new THREE.PerspectiveCamera(75, (width / 2.5) / (height), 0.1, 100);
     
-    const rendererIcosaedrus = new THREE.WebGLRenderer({ alpha: true });
-    const rendererTorus = new THREE.WebGLRenderer({ alpha: true });
-    const rendererSphere = new THREE.WebGLRenderer({ alpha: true });
 
-    const controlsIcosaedrus = new OrbitControls(cameraIcosaedrus, rendererIcosaedrus.domElement);
-    const controlsTorus = new OrbitControls(cameraTorus, rendererTorus.domElement);
-    const controlsSphere = new OrbitControls(cameraSphere, rendererSphere.domElement);
+    // controls
+    const controlsIcosaedrus = new OrbitControls(cameraIcosaedrus, icosaedrus);
+    const controlsTorus = new OrbitControls(cameraTorus, torus);
+    const controlsSphere = new OrbitControls(cameraSphere, sphere);
 
     controlsIcosaedrus.enableZoom = false;
     controlsTorus.enableZoom = false;
@@ -34,9 +41,10 @@ export function three() {
     controlsTorus.enableDamping = true;
     controlsSphere.enableDamping = true;
 
-    icosaedrus.appendChild(rendererIcosaedrus.domElement);
-    torus.appendChild(rendererTorus.domElement);
-    sphere.appendChild(rendererSphere.domElement);
+
+    /**
+     * Geometries
+     */
 
     const geometryIcosaedrus = new THREE.IcosahedronBufferGeometry(15, 2);
     const geometryTorus = new THREE.TorusKnotGeometry(10, 3, 100, 16);
@@ -52,8 +60,28 @@ export function three() {
     sceneTorus.add(TorusMesh);
     sceneSphere.add(SphereMesh);
 
+    /**
+     * Renderer
+     */
+    const rendererIcosaedrus = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const rendererTorus = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const rendererSphere = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
+    rendererIcosaedrus.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    rendererTorus.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    rendererSphere.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+    icosaedrus.appendChild(rendererIcosaedrus.domElement);
+    torus.appendChild(rendererTorus.domElement);
+    sphere.appendChild(rendererSphere.domElement);
+
+
+    /**
+     * Animate
+     */
     const animate = function () {
+        stats.begin()
+
         requestAnimationFrame(animate);
 
         IcosaedrusMesh.rotation.x += 0.001;
@@ -72,10 +100,15 @@ export function three() {
         rendererIcosaedrus.render(sceneIcosaedrus, cameraIcosaedrus);
         rendererTorus.render(sceneTorus, cameraTorus);
         rendererSphere.render(sceneSphere, cameraSphere);
+
+        stats.end()
     };
 
     animate();
 
+    /**
+     * Screen Size
+     */
 
     function analyseScreenSize() {
 
@@ -139,6 +172,7 @@ export function three() {
         rendererTorus.setSize(width*coefWidthTorus, height*coefHeightTorus);
         rendererSphere.setSize(width*coefWidthSphere, height*coefHeightSphere);
     }
+
 
     analyseScreenSize()
 
